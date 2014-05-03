@@ -23,6 +23,3 @@ cp -a Makefile.config{.EXAMPLE,} && ${EDITOR} Makefile.config
 make view
 make publish
 ```
-
-comment:
-For Ubuntu setup change the cacher.pl Perl path to be "/usr/bin/perl -w"

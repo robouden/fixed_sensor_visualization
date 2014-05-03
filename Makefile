@@ -3,7 +3,7 @@ MAKEFLAGS += --no-builtin-rules --output-sync=target --jobs 8 --max-load 3.5
 
 CONFIG := Makefile.config
 include $(CONFIG)
-NOW := $(shell date +%FT%T%Z)
+NOW := $(date --date='+14 hour' +%FT%T%Z)
 VERSION := $(shell git log -n 1 --pretty=format:"%h" 2>/dev/null)
 EXPIRE_CACHE := $(shell [[ ! -e cache/.run || -n `find cache/.run $(MAX_AGE_TO_CACHE) 2>/dev/null` ]] && touch cache/.run 2>/dev/null )
 
